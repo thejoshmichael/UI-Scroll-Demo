@@ -1,0 +1,47 @@
+@import "bourbon"
+
+body
+  padding: 0
+  margin: 0
+
+*
+  box-sizing: border-box
+
+
+// This is hiding the scrollbars (Atleast the only way I know of how to hide them)
+::-webkit-scrollbar
+  width: 0px
+
+.container
+  width: 100%
+  // height: 1000px
+
+
+// Div containing mobile mockup itself
+  The mockup width is also 320px exactly!
+.wrapper
+  width: 320px
+  height: 653px
+  background-image: url('../images/mockup.png')
+  background-size: cover
+  position: relative
+  margin: 50px
+
+  // Div containing the design (in html)
+  .frame
+    width: 275px
+    height: 490px
+
+    // This is to centre align the div that contains the design vertically
+    +position(absolute, 50% null null 50%)
+    +transform(translate(-50%, -50%))
+    overflow: auto
+
+    // slight adjustments to get it exactly-ishh right
+    margin-top: 3px
+    margin-left: 0.5px
+
+    img
+      width: 100%
+      max-width: 100%
+      display: block
